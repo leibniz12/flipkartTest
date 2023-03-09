@@ -100,6 +100,10 @@ public class BuyIphoneSI {
                 .until(ExpectedConditions.elementToBeClickable(models.otpField));
 
         models.otpField.sendKeys("123");
+
+        new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(models.loginButton));
+
         models.loginButton.click();
         try {
             Thread.sleep(4000);
